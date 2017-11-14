@@ -5,7 +5,7 @@ app.controller('myCtrl', function($scope, $http) {
         "July", "August", "September", "October", "November", "December"
     ];
 
-    $http.get('http://interviewtest.getguru.com/seismic/data.json'，{
+    $http.get('http://interviewtest.getguru.com/seismic/data.json',{
      header : {'Content-Type' : 'application/json; charset=UTF-8'}
   }).then(function(data) {
         $scope.data = data.data;

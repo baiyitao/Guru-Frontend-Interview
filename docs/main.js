@@ -6,7 +6,8 @@ app.controller('myCtrl', function($scope, $http) {
     ];
 
     $http.get('http://interviewtest.getguru.com/seismic/data.json',{
-     header : {'Content-Type' : 'application/json; charset=UTF-8'}
+      headers : {Accept : "application/json","Access-Control-Allow-Origin" : "*"}
+
   }).then(function(data) {
         $scope.data = data.data;
 
